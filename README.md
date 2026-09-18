@@ -1,5 +1,16 @@
 # 光域（Light Field）
 
+<div align="center">
+
+[![Platform](https://img.shields.io/badge/%E5%B9%B3%E5%8F%B0-ESP32--C3-blue.svg?style=for-the-badge)]()
+[![Framework](https://img.shields.io/badge/%E6%A1%86%E6%9E%B6-Arduino-yellowgreen.svg?style=for-the-badge)]()
+[![Driver](https://img.shields.io/badge/%E9%A9%B1%E5%8A%A8%E5%BA%93-FastLED-brightgreen.svg?style=for-the-badge)]()
+[![Language](https://img.shields.io/badge/%E8%AF%AD%E8%A8%80-C%2B%2B-blue.svg?style=for-the-badge)]()
+[![GitHub last commit](https://img.shields.io/github/last-commit/TuxLin123233/light-realm.svg?style=for-the-badge)]()
+[![GitHub repo size](https://img.shields.io/github/repo-size/TuxLin123233/light-realm.svg?style=for-the-badge)]()
+
+</div>
+
 一个基于 **ESP32-C3** 与 **16×16 WS2812 矩阵灯板** 的嵌入式灯光控制系统。
 
 目前已完成基础硬件搭建和 FastLED 驱动测试，能够通过代码控制矩阵显示指定颜色和图案。未来将逐步实现云端远程控制、前端画板交互等功能，打造一套完整的智能灯光控制方案。
