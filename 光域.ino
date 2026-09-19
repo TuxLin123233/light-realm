@@ -1,28 +1,12 @@
-#include <FastLED.h>
-
-#define LED_PIN     8      // GPIO8
-#define NUM_LEDS    256    // 16×16 = 256
-#define BRIGHTNESS  20     // 极低亮度，安全第一
-
-CRGB leds[NUM_LEDS];
-
+#define LDR_PIN 3
 void setup() {
-  FastLED.addLeds<WS2812B, LED_PIN, GRB>(leds, NUM_LEDS);
-  FastLED.setBrightness(BRIGHTNESS);
-  FastLED.clear();
-  FastLED.show();
+  Serial.begin(115200);
+  delay(1000);
+  Serial.println("光敏测试开始...");
 }
-
 void loop() {
-  // 只点亮前10颗，颜色为红色
-  for (int i = 0; i < 10; i++) {
-    leds[i] = CRGB::Red;
-  }
-  FastLED.show();
-  delay(2000);  // 亮2秒
-
-  // 全灭2秒
-  FastLED.clear();
-  FastLED.show();
-  delay(2000);
+  int lightValue = analogRead(LDR_PIN);
+  Serial.print("光照值: ");
+  Serial.println(lightValue);
+  delay(500);
 }
